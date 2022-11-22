@@ -3,7 +3,6 @@ package modelo;
 import java.util.Vector;
 
 public class Equipo {
-	
 	Vector<Integer> goles=new Vector<Integer>();
 	String nombre="";
 	int golesAFavor=0;
@@ -68,5 +67,6 @@ public class Equipo {
 	public void setPuntos(int puntos) {
 		this.puntos = this.puntos+puntos;
 	}
+
 
 }
