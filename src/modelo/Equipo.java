@@ -8,14 +8,14 @@ public class Equipo {
 	int golesAFavor=0;
 	int golesEnContra=0;
 	int puntos=0;
-	
+
 	public Equipo(String nombre){
 		this.nombre=nombre;
 		for(int i=0;i<3;i++){
 			goles.add(0);
 		}
 	}
-	
+
 	/**
 	 * Volver todo en 0
 	 */
@@ -27,7 +27,7 @@ public class Equipo {
 		golesEnContra=0;
 		puntos=0;
 	}
-	
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -67,6 +67,5 @@ public class Equipo {
 	public void setPuntos(int puntos) {
 		this.puntos = this.puntos+puntos;
 	}
-
 
 }
