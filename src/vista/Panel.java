@@ -1,5 +1,8 @@
 package vista;
 
-public class Panel {
+import javax.swing.JPanel;
+
+public class Panel extends JPanel{
+	
 
 }

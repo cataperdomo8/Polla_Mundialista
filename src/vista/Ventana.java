@@ -1,5 +1,7 @@
 package vista;
 
-public class Ventana {
+import javax.swing.JFrame;
+
+public class Ventana extends JFrame{
 
 }
