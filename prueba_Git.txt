@@ -1,0 +1,5 @@
+este es un archivo de prueba Git
+
+- git add -all
+-git commit -m"mensaje"
+-git gush
