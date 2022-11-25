@@ -67,4 +67,8 @@ public class Equipo {
 	public void setPuntos(int puntos) {
 		this.puntos = this.puntos+puntos;
 	}
+	
+	public void crearEquipo(){
+		
+	}
 }
