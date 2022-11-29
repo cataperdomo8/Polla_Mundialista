@@ -6,10 +6,10 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
-public class Panel2 extends JPanel{
+public class Panel3 extends JPanel{
 	ImageIcon imagen;
 	String nombre;
-	public Panel2(String nombre) {
+	public Panel3(String nombre) {
 		this.nombre=nombre;
 	}
 	public void paint(Graphics g) {
