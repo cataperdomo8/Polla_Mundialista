@@ -4,14 +4,10 @@ import javax.swing.*;
 
 import controlador.Controller;
 
-
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Ventana extends JFrame{
-
 	private Controller c;
 
 	private Panel panelPrincipal;
@@ -40,110 +36,112 @@ public class Ventana extends JFrame{
 	public JButton boton5 = new JButton("Grupo F");
 	public JButton boton6 = new JButton("Grupo G");
 	public JButton boton7 = new JButton("Grupo H");
+	public JButton bContinuar = new JButton("Continuar");
+	public JButton bSiguienteFase = new JButton("Siguiente Fase");
 
-	public JTextField textFieldGA1=new JTextField();
-	public JTextField textFieldGA2=new JTextField();
-	public JTextField textFieldGA3=new JTextField();
-	public JTextField textFieldGA4=new JTextField();
-	public JTextField textFieldGA5=new JTextField();
-	public JTextField textFieldGA6=new JTextField();
-	public JTextField textFieldGA7=new JTextField();
-	public JTextField textFieldGA8=new JTextField();
-	public JTextField textFieldGA9=new JTextField();
-	public JTextField textFieldGA10=new JTextField();
-	public JTextField textFieldGA11=new JTextField();
-	public JTextField textFieldGA12=new JTextField();
+	public JTextField textFieldGA1=new JTextField("0");
+	public JTextField textFieldGA2=new JTextField("2");
+	public JTextField textFieldGA3=new JTextField("1");
+	public JTextField textFieldGA4=new JTextField("1");
+	public JTextField textFieldGA5=new JTextField("2");
+	public JTextField textFieldGA6=new JTextField("2");
+	public JTextField textFieldGA7=new JTextField("3");
+	public JTextField textFieldGA8=new JTextField("1");
+	public JTextField textFieldGA9=new JTextField("3");
+	public JTextField textFieldGA10=new JTextField("1");
+	public JTextField textFieldGA11=new JTextField("2");
+	public JTextField textFieldGA12=new JTextField("1");
 	
-	public JTextField textFieldGB1=new JTextField();
-	public JTextField textFieldGB2=new JTextField();
-	public JTextField textFieldGB3=new JTextField();
-	public JTextField textFieldGB4=new JTextField();
-	public JTextField textFieldGB5=new JTextField();
-	public JTextField textFieldGB6=new JTextField();
-	public JTextField textFieldGB7=new JTextField();
-	public JTextField textFieldGB8=new JTextField();
-	public JTextField textFieldGB9=new JTextField();
-	public JTextField textFieldGB10=new JTextField();
-	public JTextField textFieldGB11=new JTextField();
-	public JTextField textFieldGB12=new JTextField();
+	public JTextField textFieldGB1=new JTextField("6");
+	public JTextField textFieldGB2=new JTextField("2");
+	public JTextField textFieldGB3=new JTextField("2");
+	public JTextField textFieldGB4=new JTextField("2");
+	public JTextField textFieldGB5=new JTextField("3");
+	public JTextField textFieldGB6=new JTextField("1");
+	public JTextField textFieldGB7=new JTextField("0");
+	public JTextField textFieldGB8=new JTextField("0");
+	public JTextField textFieldGB9=new JTextField("2");
+	public JTextField textFieldGB10=new JTextField("0");
+	public JTextField textFieldGB11=new JTextField("3");
+	public JTextField textFieldGB12=new JTextField("3");
 	
-	public JTextField textFieldGC1=new JTextField();
-	public JTextField textFieldGC2=new JTextField();
-	public JTextField textFieldGC3=new JTextField();
-	public JTextField textFieldGC4=new JTextField();
-	public JTextField textFieldGC5=new JTextField();
-	public JTextField textFieldGC6=new JTextField();
-	public JTextField textFieldGC7=new JTextField();
-	public JTextField textFieldGC8=new JTextField();
-	public JTextField textFieldGC9=new JTextField();
-	public JTextField textFieldGC10=new JTextField();
-	public JTextField textFieldGC11=new JTextField();
-	public JTextField textFieldGC12=new JTextField();
+	public JTextField textFieldGC1=new JTextField("0");
+	public JTextField textFieldGC2=new JTextField("0");
+	public JTextField textFieldGC3=new JTextField("3");
+	public JTextField textFieldGC4=new JTextField("3");
+	public JTextField textFieldGC5=new JTextField("3");
+	public JTextField textFieldGC6=new JTextField("1");
+	public JTextField textFieldGC7=new JTextField("0");
+	public JTextField textFieldGC8=new JTextField("0");
+	public JTextField textFieldGC9=new JTextField("0");
+	public JTextField textFieldGC10=new JTextField("0");
+	public JTextField textFieldGC11=new JTextField("3");
+	public JTextField textFieldGC12=new JTextField("3");
 	
-	public JTextField textFieldGD1=new JTextField();
-	public JTextField textFieldGD2=new JTextField();
-	public JTextField textFieldGD3=new JTextField();
-	public JTextField textFieldGD4=new JTextField();
-	public JTextField textFieldGD5=new JTextField();
-	public JTextField textFieldGD6=new JTextField();
-	public JTextField textFieldGD7=new JTextField();
-	public JTextField textFieldGD8=new JTextField();
-	public JTextField textFieldGD9=new JTextField();
-	public JTextField textFieldGD10=new JTextField();
-	public JTextField textFieldGD11=new JTextField();
-	public JTextField textFieldGD12=new JTextField();
+	public JTextField textFieldGD1=new JTextField("0");
+	public JTextField textFieldGD2=new JTextField("0");
+	public JTextField textFieldGD3=new JTextField("3");
+	public JTextField textFieldGD4=new JTextField("1");
+	public JTextField textFieldGD5=new JTextField("2");
+	public JTextField textFieldGD6=new JTextField("2");
+	public JTextField textFieldGD7=new JTextField("2");
+	public JTextField textFieldGD8=new JTextField("1");
+	public JTextField textFieldGD9=new JTextField("2");
+	public JTextField textFieldGD10=new JTextField("1");
+	public JTextField textFieldGD11=new JTextField("3");
+	public JTextField textFieldGD12=new JTextField("0");
 	
-	public JTextField textFieldGE1=new JTextField();
-	public JTextField textFieldGE2=new JTextField();
-	public JTextField textFieldGE3=new JTextField();
-	public JTextField textFieldGE4=new JTextField();
-	public JTextField textFieldGE5=new JTextField();
-	public JTextField textFieldGE6=new JTextField();
-	public JTextField textFieldGE7=new JTextField();
-	public JTextField textFieldGE8=new JTextField();
-	public JTextField textFieldGE9=new JTextField();
-	public JTextField textFieldGE10=new JTextField();
-	public JTextField textFieldGE11=new JTextField();
-	public JTextField textFieldGE12=new JTextField();
+	public JTextField textFieldGE1=new JTextField("0");
+	public JTextField textFieldGE2=new JTextField("5");
+	public JTextField textFieldGE3=new JTextField("2");
+	public JTextField textFieldGE4=new JTextField("0");
+	public JTextField textFieldGE5=new JTextField("1");
+	public JTextField textFieldGE6=new JTextField("2");
+	public JTextField textFieldGE7=new JTextField("3");
+	public JTextField textFieldGE8=new JTextField("2");
+	public JTextField textFieldGE9=new JTextField("5");
+	public JTextField textFieldGE10=new JTextField("2");
+	public JTextField textFieldGE11=new JTextField("1");
+	public JTextField textFieldGE12=new JTextField("2");
 	
-	public JTextField textFieldGF1=new JTextField();
-	public JTextField textFieldGF2=new JTextField();
-	public JTextField textFieldGF3=new JTextField();
-	public JTextField textFieldGF4=new JTextField();
-	public JTextField textFieldGF5=new JTextField();
-	public JTextField textFieldGF6=new JTextField();
-	public JTextField textFieldGF7=new JTextField();
-	public JTextField textFieldGF8=new JTextField();
-	public JTextField textFieldGF9=new JTextField();
-	public JTextField textFieldGF10=new JTextField();
-	public JTextField textFieldGF11=new JTextField();
-	public JTextField textFieldGF12=new JTextField();
+	public JTextField textFieldGF1=new JTextField("1");
+	public JTextField textFieldGF2=new JTextField("3");
+	public JTextField textFieldGF3=new JTextField("2");
+	public JTextField textFieldGF4=new JTextField("5");
+	public JTextField textFieldGF5=new JTextField("0");
+	public JTextField textFieldGF6=new JTextField("2");
+	public JTextField textFieldGF7=new JTextField("0");
+	public JTextField textFieldGF8=new JTextField("1");
+	public JTextField textFieldGF9=new JTextField("5");
+	public JTextField textFieldGF10=new JTextField("0");
+	public JTextField textFieldGF11=new JTextField("2");
+	public JTextField textFieldGF12=new JTextField("0");
 	
-	public JTextField textFieldGG1=new JTextField();
-	public JTextField textFieldGG2=new JTextField();
-	public JTextField textFieldGG3=new JTextField();
-	public JTextField textFieldGG4=new JTextField();
-	public JTextField textFieldGG5=new JTextField();
-	public JTextField textFieldGG6=new JTextField();
-	public JTextField textFieldGG7=new JTextField();
-	public JTextField textFieldGG8=new JTextField();
-	public JTextField textFieldGG9=new JTextField();
-	public JTextField textFieldGG10=new JTextField();
-	public JTextField textFieldGG11=new JTextField();
-	public JTextField textFieldGG12=new JTextField();
+	public JTextField textFieldGG1=new JTextField("0");
+	public JTextField textFieldGG2=new JTextField("0");
+	public JTextField textFieldGG3=new JTextField("1");
+	public JTextField textFieldGG4=new JTextField("1");
+	public JTextField textFieldGG5=new JTextField("2");
+	public JTextField textFieldGG6=new JTextField("3");
+	public JTextField textFieldGG7=new JTextField("5");
+	public JTextField textFieldGG8=new JTextField("0");
+	public JTextField textFieldGG9=new JTextField("6");
+	public JTextField textFieldGG10=new JTextField("7");
+	public JTextField textFieldGG11=new JTextField("0");
+	public JTextField textFieldGG12=new JTextField("2");
 	
-	public JTextField textFieldGH1=new JTextField();
-	public JTextField textFieldGH2=new JTextField();
-	public JTextField textFieldGH3=new JTextField();
-	public JTextField textFieldGH4=new JTextField();
-	public JTextField textFieldGH5=new JTextField();
-	public JTextField textFieldGH6=new JTextField();
-	public JTextField textFieldGH7=new JTextField();
-	public JTextField textFieldGH8=new JTextField();
-	public JTextField textFieldGH9=new JTextField();
-	public JTextField textFieldGH10=new JTextField();
-	public JTextField textFieldGH11=new JTextField();
-	public JTextField textFieldGH12=new JTextField();
+	public JTextField textFieldGH1=new JTextField("2");
+	public JTextField textFieldGH2=new JTextField("1");
+	public JTextField textFieldGH3=new JTextField("2");
+	public JTextField textFieldGH4=new JTextField("2");
+	public JTextField textFieldGH5=new JTextField("0");
+	public JTextField textFieldGH6=new JTextField("0");
+	public JTextField textFieldGH7=new JTextField("3");
+	public JTextField textFieldGH8=new JTextField("0");
+	public JTextField textFieldGH9=new JTextField("5");
+	public JTextField textFieldGH10=new JTextField("0");
+	public JTextField textFieldGH11=new JTextField("2");
+	public JTextField textFieldGH12=new JTextField("3");
 	
 	public Ventana() {
 		super("_ P O L L A_M U N D I A L I S T A_");
@@ -846,6 +844,14 @@ public class Ventana extends JFrame{
         textFieldGH12.setBounds(550, 250,40,20);
 		panelGH.add(textFieldGH12);
 		
+		bContinuar.setBounds(800,400, 100, 30);
+		bContinuar.setBackground(new Color(253, 251, 251));
+		panelGH.add(bContinuar);
+		
+		bSiguienteFase.setBounds(800,450, 120, 30);
+		bSiguienteFase.setBackground(new Color(253, 251, 251));
+		panelGH.add(bSiguienteFase);
+		
 	}
 
 	//Recibe el controlador y se lo entrega al boton.
@@ -859,6 +865,8 @@ public class Ventana extends JFrame{
 		this.boton5.addActionListener(this.c);
 		this.boton6.addActionListener(this.c);
 		this.boton7.addActionListener(this.c);
+		this.bContinuar.addActionListener(this.c);
+		this.bSiguienteFase.addActionListener(this.c);
 	}
 
 	public JButton getBoton0() {
@@ -925,6 +933,14 @@ public class Ventana extends JFrame{
 		this.boton7 = boton7;
 	}
 
+	public JButton getbContinuar() {
+		return bContinuar;
+	}
+
+	public void setbContinuar(JButton bContinuar) {
+		this.bContinuar = bContinuar;
+	}
+
 	public Panel getPanelGA() {
 		return panelGA;
 	}
@@ -989,4 +1005,779 @@ public class Ventana extends JFrame{
 		this.panelGH = panelGH;
 	}
 
+	public JTextField getTextFieldGA1() {
+		return textFieldGA1;
+	}
+
+	public JTextField getTextFieldGA2() {
+		return textFieldGA2;
+	}
+
+	public void setTextFieldGA2(JTextField textFieldGA2) {
+		this.textFieldGA2 = textFieldGA2;
+	}
+
+	public JTextField getTextFieldGA3() {
+		return textFieldGA3;
+	}
+
+	public void setTextFieldGA3(JTextField textFieldGA3) {
+		this.textFieldGA3 = textFieldGA3;
+	}
+
+	public JTextField getTextFieldGA4() {
+		return textFieldGA4;
+	}
+
+	public void setTextFieldGA4(JTextField textFieldGA4) {
+		this.textFieldGA4 = textFieldGA4;
+	}
+
+	public JTextField getTextFieldGA5() {
+		return textFieldGA5;
+	}
+
+	public void setTextFieldGA5(JTextField textFieldGA5) {
+		this.textFieldGA5 = textFieldGA5;
+	}
+
+	public JTextField getTextFieldGA6() {
+		return textFieldGA6;
+	}
+
+	public void setTextFieldGA6(JTextField textFieldGA6) {
+		this.textFieldGA6 = textFieldGA6;
+	}
+
+	public JTextField getTextFieldGA7() {
+		return textFieldGA7;
+	}
+
+	public void setTextFieldGA7(JTextField textFieldGA7) {
+		this.textFieldGA7 = textFieldGA7;
+	}
+
+	public JTextField getTextFieldGA8() {
+		return textFieldGA8;
+	}
+
+	public void setTextFieldGA8(JTextField textFieldGA8) {
+		this.textFieldGA8 = textFieldGA8;
+	}
+
+	public JTextField getTextFieldGA9() {
+		return textFieldGA9;
+	}
+
+	public void setTextFieldGA9(JTextField textFieldGA9) {
+		this.textFieldGA9 = textFieldGA9;
+	}
+
+	public JTextField getTextFieldGA10() {
+		return textFieldGA10;
+	}
+
+	public void setTextFieldGA10(JTextField textFieldGA10) {
+		this.textFieldGA10 = textFieldGA10;
+	}
+
+	public JTextField getTextFieldGA11() {
+		return textFieldGA11;
+	}
+
+	public void setTextFieldGA11(JTextField textFieldGA11) {
+		this.textFieldGA11 = textFieldGA11;
+	}
+
+	public JTextField getTextFieldGA12() {
+		return textFieldGA12;
+	}
+
+	public void setTextFieldGA12(JTextField textFieldGA12) {
+		this.textFieldGA12 = textFieldGA12;
+	}
+
+	public JTextField getTextFieldGB1() {
+		return textFieldGB1;
+	}
+
+	public void setTextFieldGB1(JTextField textFieldGB1) {
+		this.textFieldGB1 = textFieldGB1;
+	}
+
+	public JTextField getTextFieldGB2() {
+		return textFieldGB2;
+	}
+
+	public void setTextFieldGB2(JTextField textFieldGB2) {
+		this.textFieldGB2 = textFieldGB2;
+	}
+
+	public JTextField getTextFieldGB3() {
+		return textFieldGB3;
+	}
+
+	public void setTextFieldGB3(JTextField textFieldGB3) {
+		this.textFieldGB3 = textFieldGB3;
+	}
+
+	public JTextField getTextFieldGB4() {
+		return textFieldGB4;
+	}
+
+	public void setTextFieldGB4(JTextField textFieldGB4) {
+		this.textFieldGB4 = textFieldGB4;
+	}
+
+	public JTextField getTextFieldGB5() {
+		return textFieldGB5;
+	}
+
+	public void setTextFieldGB5(JTextField textFieldGB5) {
+		this.textFieldGB5 = textFieldGB5;
+	}
+
+	public JTextField getTextFieldGB6() {
+		return textFieldGB6;
+	}
+
+	public void setTextFieldGB6(JTextField textFieldGB6) {
+		this.textFieldGB6 = textFieldGB6;
+	}
+
+	public JTextField getTextFieldGB7() {
+		return textFieldGB7;
+	}
+
+	public void setTextFieldGB7(JTextField textFieldGB7) {
+		this.textFieldGB7 = textFieldGB7;
+	}
+
+	public JTextField getTextFieldGB8() {
+		return textFieldGB8;
+	}
+
+	public void setTextFieldGB8(JTextField textFieldGB8) {
+		this.textFieldGB8 = textFieldGB8;
+	}
+
+	public JTextField getTextFieldGB9() {
+		return textFieldGB9;
+	}
+
+	public void setTextFieldGB9(JTextField textFieldGB9) {
+		this.textFieldGB9 = textFieldGB9;
+	}
+
+	public JTextField getTextFieldGB10() {
+		return textFieldGB10;
+	}
+
+	public void setTextFieldGB10(JTextField textFieldGB10) {
+		this.textFieldGB10 = textFieldGB10;
+	}
+
+	public JTextField getTextFieldGB11() {
+		return textFieldGB11;
+	}
+
+	public void setTextFieldGB11(JTextField textFieldGB11) {
+		this.textFieldGB11 = textFieldGB11;
+	}
+
+	public JTextField getTextFieldGB12() {
+		return textFieldGB12;
+	}
+
+	public void setTextFieldGB12(JTextField textFieldGB12) {
+		this.textFieldGB12 = textFieldGB12;
+	}
+
+	public JTextField getTextFieldGC1() {
+		return textFieldGC1;
+	}
+
+	public void setTextFieldGC1(JTextField textFieldGC1) {
+		this.textFieldGC1 = textFieldGC1;
+	}
+
+	public JTextField getTextFieldGC2() {
+		return textFieldGC2;
+	}
+
+	public void setTextFieldGC2(JTextField textFieldGC2) {
+		this.textFieldGC2 = textFieldGC2;
+	}
+
+	public JTextField getTextFieldGC3() {
+		return textFieldGC3;
+	}
+
+	public void setTextFieldGC3(JTextField textFieldGC3) {
+		this.textFieldGC3 = textFieldGC3;
+	}
+
+	public JTextField getTextFieldGC4() {
+		return textFieldGC4;
+	}
+
+	public void setTextFieldGC4(JTextField textFieldGC4) {
+		this.textFieldGC4 = textFieldGC4;
+	}
+
+	public JTextField getTextFieldGC5() {
+		return textFieldGC5;
+	}
+
+	public void setTextFieldGC5(JTextField textFieldGC5) {
+		this.textFieldGC5 = textFieldGC5;
+	}
+
+	public JTextField getTextFieldGC6() {
+		return textFieldGC6;
+	}
+
+	public void setTextFieldGC6(JTextField textFieldGC6) {
+		this.textFieldGC6 = textFieldGC6;
+	}
+
+	public JTextField getTextFieldGC7() {
+		return textFieldGC7;
+	}
+
+	public void setTextFieldGC7(JTextField textFieldGC7) {
+		this.textFieldGC7 = textFieldGC7;
+	}
+
+	public JTextField getTextFieldGC8() {
+		return textFieldGC8;
+	}
+
+	public void setTextFieldGC8(JTextField textFieldGC8) {
+		this.textFieldGC8 = textFieldGC8;
+	}
+
+	public JTextField getTextFieldGC9() {
+		return textFieldGC9;
+	}
+
+	public void setTextFieldGC9(JTextField textFieldGC9) {
+		this.textFieldGC9 = textFieldGC9;
+	}
+
+	public JTextField getTextFieldGC10() {
+		return textFieldGC10;
+	}
+
+	public void setTextFieldGC10(JTextField textFieldGC10) {
+		this.textFieldGC10 = textFieldGC10;
+	}
+
+	public JTextField getTextFieldGC11() {
+		return textFieldGC11;
+	}
+
+	public void setTextFieldGC11(JTextField textFieldGC11) {
+		this.textFieldGC11 = textFieldGC11;
+	}
+
+	public JTextField getTextFieldGC12() {
+		return textFieldGC12;
+	}
+
+	public void setTextFieldGC12(JTextField textFieldGC12) {
+		this.textFieldGC12 = textFieldGC12;
+	}
+
+	public JTextField getTextFieldGD1() {
+		return textFieldGD1;
+	}
+
+	public void setTextFieldGD1(JTextField textFieldGD1) {
+		this.textFieldGD1 = textFieldGD1;
+	}
+
+	public JTextField getTextFieldGD2() {
+		return textFieldGD2;
+	}
+
+	public void setTextFieldGD2(JTextField textFieldGD2) {
+		this.textFieldGD2 = textFieldGD2;
+	}
+
+	public JTextField getTextFieldGD3() {
+		return textFieldGD3;
+	}
+
+	public void setTextFieldGD3(JTextField textFieldGD3) {
+		this.textFieldGD3 = textFieldGD3;
+	}
+
+	public JTextField getTextFieldGD4() {
+		return textFieldGD4;
+	}
+
+	public void setTextFieldGD4(JTextField textFieldGD4) {
+		this.textFieldGD4 = textFieldGD4;
+	}
+
+	public JTextField getTextFieldGD5() {
+		return textFieldGD5;
+	}
+
+	public void setTextFieldGD5(JTextField textFieldGD5) {
+		this.textFieldGD5 = textFieldGD5;
+	}
+
+	public JTextField getTextFieldGD6() {
+		return textFieldGD6;
+	}
+
+	public void setTextFieldGD6(JTextField textFieldGD6) {
+		this.textFieldGD6 = textFieldGD6;
+	}
+
+	public JTextField getTextFieldGD7() {
+		return textFieldGD7;
+	}
+
+	public void setTextFieldGD7(JTextField textFieldGD7) {
+		this.textFieldGD7 = textFieldGD7;
+	}
+
+	public JTextField getTextFieldGD8() {
+		return textFieldGD8;
+	}
+
+	public void setTextFieldGD8(JTextField textFieldGD8) {
+		this.textFieldGD8 = textFieldGD8;
+	}
+
+	public JTextField getTextFieldGD9() {
+		return textFieldGD9;
+	}
+
+	public void setTextFieldGD9(JTextField textFieldGD9) {
+		this.textFieldGD9 = textFieldGD9;
+	}
+
+	public JTextField getTextFieldGD10() {
+		return textFieldGD10;
+	}
+
+	public void setTextFieldGD10(JTextField textFieldGD10) {
+		this.textFieldGD10 = textFieldGD10;
+	}
+
+	public JTextField getTextFieldGD11() {
+		return textFieldGD11;
+	}
+
+	public void setTextFieldGD11(JTextField textFieldGD11) {
+		this.textFieldGD11 = textFieldGD11;
+	}
+
+	public JTextField getTextFieldGD12() {
+		return textFieldGD12;
+	}
+
+	public void setTextFieldGD12(JTextField textFieldGD12) {
+		this.textFieldGD12 = textFieldGD12;
+	}
+
+	public JTextField getTextFieldGE1() {
+		return textFieldGE1;
+	}
+
+	public void setTextFieldGE1(JTextField textFieldGE1) {
+		this.textFieldGE1 = textFieldGE1;
+	}
+
+	public JTextField getTextFieldGE2() {
+		return textFieldGE2;
+	}
+
+	public void setTextFieldGE2(JTextField textFieldGE2) {
+		this.textFieldGE2 = textFieldGE2;
+	}
+
+	public JTextField getTextFieldGE3() {
+		return textFieldGE3;
+	}
+
+	public void setTextFieldGE3(JTextField textFieldGE3) {
+		this.textFieldGE3 = textFieldGE3;
+	}
+
+	public JTextField getTextFieldGE4() {
+		return textFieldGE4;
+	}
+
+	public void setTextFieldGE4(JTextField textFieldGE4) {
+		this.textFieldGE4 = textFieldGE4;
+	}
+
+	public JTextField getTextFieldGE5() {
+		return textFieldGE5;
+	}
+
+	public void setTextFieldGE5(JTextField textFieldGE5) {
+		this.textFieldGE5 = textFieldGE5;
+	}
+
+	public JTextField getTextFieldGE6() {
+		return textFieldGE6;
+	}
+
+	public void setTextFieldGE6(JTextField textFieldGE6) {
+		this.textFieldGE6 = textFieldGE6;
+	}
+
+	public JTextField getTextFieldGE7() {
+		return textFieldGE7;
+	}
+
+	public void setTextFieldGE7(JTextField textFieldGE7) {
+		this.textFieldGE7 = textFieldGE7;
+	}
+
+	public JTextField getTextFieldGE8() {
+		return textFieldGE8;
+	}
+
+	public void setTextFieldGE8(JTextField textFieldGE8) {
+		this.textFieldGE8 = textFieldGE8;
+	}
+
+	public JTextField getTextFieldGE9() {
+		return textFieldGE9;
+	}
+
+	public void setTextFieldGE9(JTextField textFieldGE9) {
+		this.textFieldGE9 = textFieldGE9;
+	}
+
+	public JTextField getTextFieldGE10() {
+		return textFieldGE10;
+	}
+
+	public void setTextFieldGE10(JTextField textFieldGE10) {
+		this.textFieldGE10 = textFieldGE10;
+	}
+
+	public JTextField getTextFieldGE11() {
+		return textFieldGE11;
+	}
+
+	public void setTextFieldGE11(JTextField textFieldGE11) {
+		this.textFieldGE11 = textFieldGE11;
+	}
+
+	public JTextField getTextFieldGE12() {
+		return textFieldGE12;
+	}
+
+	public void setTextFieldGE12(JTextField textFieldGE12) {
+		this.textFieldGE12 = textFieldGE12;
+	}
+
+	public JTextField getTextFieldGF1() {
+		return textFieldGF1;
+	}
+
+	public void setTextFieldGF1(JTextField textFieldGF1) {
+		this.textFieldGF1 = textFieldGF1;
+	}
+
+	public JTextField getTextFieldGF2() {
+		return textFieldGF2;
+	}
+
+	public void setTextFieldGF2(JTextField textFieldGF2) {
+		this.textFieldGF2 = textFieldGF2;
+	}
+
+	public JTextField getTextFieldGF3() {
+		return textFieldGF3;
+	}
+
+	public void setTextFieldGF3(JTextField textFieldGF3) {
+		this.textFieldGF3 = textFieldGF3;
+	}
+
+	public JTextField getTextFieldGF4() {
+		return textFieldGF4;
+	}
+
+	public void setTextFieldGF4(JTextField textFieldGF4) {
+		this.textFieldGF4 = textFieldGF4;
+	}
+
+	public JTextField getTextFieldGF5() {
+		return textFieldGF5;
+	}
+
+	public void setTextFieldGF5(JTextField textFieldGF5) {
+		this.textFieldGF5 = textFieldGF5;
+	}
+
+	public JTextField getTextFieldGF6() {
+		return textFieldGF6;
+	}
+
+	public void setTextFieldGF6(JTextField textFieldGF6) {
+		this.textFieldGF6 = textFieldGF6;
+	}
+
+	public JTextField getTextFieldGF7() {
+		return textFieldGF7;
+	}
+
+	public void setTextFieldGF7(JTextField textFieldGF7) {
+		this.textFieldGF7 = textFieldGF7;
+	}
+
+	public JTextField getTextFieldGF8() {
+		return textFieldGF8;
+	}
+
+	public void setTextFieldGF8(JTextField textFieldGF8) {
+		this.textFieldGF8 = textFieldGF8;
+	}
+
+	public JTextField getTextFieldGF9() {
+		return textFieldGF9;
+	}
+
+	public void setTextFieldGF9(JTextField textFieldGF9) {
+		this.textFieldGF9 = textFieldGF9;
+	}
+
+	public JTextField getTextFieldGF10() {
+		return textFieldGF10;
+	}
+
+	public void setTextFieldGF10(JTextField textFieldGF10) {
+		this.textFieldGF10 = textFieldGF10;
+	}
+
+	public JTextField getTextFieldGF11() {
+		return textFieldGF11;
+	}
+
+	public void setTextFieldGF11(JTextField textFieldGF11) {
+		this.textFieldGF11 = textFieldGF11;
+	}
+
+	public JTextField getTextFieldGF12() {
+		return textFieldGF12;
+	}
+
+	public void setTextFieldGF12(JTextField textFieldGF12) {
+		this.textFieldGF12 = textFieldGF12;
+	}
+
+	public JTextField getTextFieldGG1() {
+		return textFieldGG1;
+	}
+
+	public void setTextFieldGG1(JTextField textFieldGG1) {
+		this.textFieldGG1 = textFieldGG1;
+	}
+
+	public JTextField getTextFieldGG2() {
+		return textFieldGG2;
+	}
+
+	public void setTextFieldGG2(JTextField textFieldGG2) {
+		this.textFieldGG2 = textFieldGG2;
+	}
+
+	public JTextField getTextFieldGG3() {
+		return textFieldGG3;
+	}
+
+	public void setTextFieldGG3(JTextField textFieldGG3) {
+		this.textFieldGG3 = textFieldGG3;
+	}
+
+	public JTextField getTextFieldGG4() {
+		return textFieldGG4;
+	}
+
+	public void setTextFieldGG4(JTextField textFieldGG4) {
+		this.textFieldGG4 = textFieldGG4;
+	}
+
+	public JTextField getTextFieldGG5() {
+		return textFieldGG5;
+	}
+
+	public void setTextFieldGG5(JTextField textFieldGG5) {
+		this.textFieldGG5 = textFieldGG5;
+	}
+
+	public JTextField getTextFieldGG6() {
+		return textFieldGG6;
+	}
+
+	public void setTextFieldGG6(JTextField textFieldGG6) {
+		this.textFieldGG6 = textFieldGG6;
+	}
+
+	public JTextField getTextFieldGG7() {
+		return textFieldGG7;
+	}
+
+	public void setTextFieldGG7(JTextField textFieldGG7) {
+		this.textFieldGG7 = textFieldGG7;
+	}
+
+	public JTextField getTextFieldGG8() {
+		return textFieldGG8;
+	}
+
+	public void setTextFieldGG8(JTextField textFieldGG8) {
+		this.textFieldGG8 = textFieldGG8;
+	}
+
+	public JTextField getTextFieldGG9() {
+		return textFieldGG9;
+	}
+
+	public void setTextFieldGG9(JTextField textFieldGG9) {
+		this.textFieldGG9 = textFieldGG9;
+	}
+
+	public JTextField getTextFieldGG10() {
+		return textFieldGG10;
+	}
+
+	public void setTextFieldGG10(JTextField textFieldGG10) {
+		this.textFieldGG10 = textFieldGG10;
+	}
+
+	public JTextField getTextFieldGG11() {
+		return textFieldGG11;
+	}
+
+	public void setTextFieldGG11(JTextField textFieldGG11) {
+		this.textFieldGG11 = textFieldGG11;
+	}
+
+	public JTextField getTextFieldGG12() {
+		return textFieldGG12;
+	}
+
+	public void setTextFieldGG12(JTextField textFieldGG12) {
+		this.textFieldGG12 = textFieldGG12;
+	}
+
+	public JTextField getTextFieldGH1() {
+		return textFieldGH1;
+	}
+
+	public void setTextFieldGH1(JTextField textFieldGH1) {
+		this.textFieldGH1 = textFieldGH1;
+	}
+
+	public JTextField getTextFieldGH2() {
+		return textFieldGH2;
+	}
+
+	public void setTextFieldGH2(JTextField textFieldGH2) {
+		this.textFieldGH2 = textFieldGH2;
+	}
+
+	public JTextField getTextFieldGH3() {
+		return textFieldGH3;
+	}
+
+	public void setTextFieldGH3(JTextField textFieldGH3) {
+		this.textFieldGH3 = textFieldGH3;
+	}
+
+	public JTextField getTextFieldGH4() {
+		return textFieldGH4;
+	}
+
+	public void setTextFieldGH4(JTextField textFieldGH4) {
+		this.textFieldGH4 = textFieldGH4;
+	}
+
+	public JTextField getTextFieldGH5() {
+		return textFieldGH5;
+	}
+
+	public void setTextFieldGH5(JTextField textFieldGH5) {
+		this.textFieldGH5 = textFieldGH5;
+	}
+
+	public JTextField getTextFieldGH6() {
+		return textFieldGH6;
+	}
+
+	public void setTextFieldGH6(JTextField textFieldGH6) {
+		this.textFieldGH6 = textFieldGH6;
+	}
+
+	public JTextField getTextFieldGH7() {
+		return textFieldGH7;
+	}
+
+	public void setTextFieldGH7(JTextField textFieldGH7) {
+		this.textFieldGH7 = textFieldGH7;
+	}
+
+	public JTextField getTextFieldGH8() {
+		return textFieldGH8;
+	}
+
+	public void setTextFieldGH8(JTextField textFieldGH8) {
+		this.textFieldGH8 = textFieldGH8;
+	}
+
+	public JTextField getTextFieldGH9() {
+		return textFieldGH9;
+	}
+
+	public void setTextFieldGH9(JTextField textFieldGH9) {
+		this.textFieldGH9 = textFieldGH9;
+	}
+
+	public JTextField getTextFieldGH10() {
+		return textFieldGH10;
+	}
+
+	public void setTextFieldGH10(JTextField textFieldGH10) {
+		this.textFieldGH10 = textFieldGH10;
+	}
+
+	public JTextField getTextFieldGH11() {
+		return textFieldGH11;
+	}
+
+	public void setTextFieldGH11(JTextField textFieldGH11) {
+		this.textFieldGH11 = textFieldGH11;
+	}
+
+	public JTextField getTextFieldGH12() {
+		return textFieldGH12;
+	}
+
+	public void setTextFieldGH12(JTextField textFieldGH12) {
+		this.textFieldGH12 = textFieldGH12;
+	}
+
+	public void setTextFieldGA1(JTextField textFieldGA1) {
+		this.textFieldGA1 = textFieldGA1;
+	}
+
+	public JButton getbSiguienteFase() {
+		return bSiguienteFase;
+	}
+
+	public void setbSiguienteFase(JButton bSiguienteFase) {
+		this.bSiguienteFase = bSiguienteFase;
+	}
 }

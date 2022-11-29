@@ -3,17 +3,27 @@ package controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JOptionPane;
 
+import modelo.FasesGrupos;
+import vista.Panel;
 import vista.Ventana;
+import vista.Ventana2;
 
 public class Controller implements ActionListener{
-	
+
 	private Ventana vista;
-	
-	public Controller (Ventana v){
-        this.vista = v;
-        this.vista.setController(this);
-    }
+	private FasesGrupos grupos;
+	private Ventana2 ventana2;
+	//ventana2.setVisible(true);
+
+	public Controller (FasesGrupos g, Ventana v, Ventana2 v2){
+		this.vista = v;
+		this.grupos = g;
+		this.vista.setController(this);
+		this.ventana2 = v2;
+
+	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource()==vista.getBoton0()) {
@@ -88,6 +98,12 @@ public class Controller implements ActionListener{
 			vista.getPanelGF().setVisible(false);
 			vista.getPanelGG().setVisible(false);
 			vista.getPanelGH().setVisible(true);
+		}else if(e.getSource()==vista.getbContinuar()) {
+			grupos.lectura("Resultados.txt");
+			JOptionPane.showMessageDialog(null, "Total Puntos "+grupos.getTotal());
+			System.out.println(grupos.getTotal());
+		}else if(e.getSource()==vista.getbSiguienteFase()) {
+			ventana2.setVisible(true);
 		}
 	}
 
