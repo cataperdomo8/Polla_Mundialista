@@ -16,11 +16,16 @@ public class Ventana2 extends JFrame{
 		super("_ P O L L A _ M U N D I A L I S T A _ F A S E 2_");
 		setLayout(null);
 		setBounds(10, 10, 1450, 680);
-		setVisible(true);
+		setVisible(false);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.getContentPane().setBackground(new Color(88, 24, 69));
 		componentes();
 	}
+	
+	private JLabel primero;
+	private JLabel segundo;
+	private JLabel tercero;
+	private JLabel cuarto;
 
 	/*TextField Octvos de Final*/
 
@@ -61,16 +66,24 @@ public class Ventana2 extends JFrame{
 
 	/*TextField Finalistas*/
 
-	public JTextField textFieldPrim =new JTextField();
-	public JTextField textFieldSeg =new JTextField();
-	public JTextField textFieldTer =new JTextField();
-	public JTextField textFieldCuar =new JTextField();
+	public JTextField textFieldFinal1 =new JTextField();
+	public JTextField textFieldFinal2 =new JTextField();
+	
+	/*Ganadores, perdedores, tercer, cuarto*/
+	
+	public JTextField textFieldGanador =new JTextField();
+	public JTextField textFieldSegundo =new JTextField();
+	public JTextField textFieldTercero =new JTextField();
+	public JTextField textFieldCuarto =new JTextField();
 
 	public void componentes() {
 		inicializarPaneles();
 		inicializarEtiquetas();
 		inicializarOctavos();
 		inicializarCuartos();
+		inicializarSemifinal();
+		inicializarFinal();
+		Posiciones();
 	}
 
 	public void inicializarPaneles() {
@@ -164,16 +177,90 @@ public class Ventana2 extends JFrame{
 		
 		textFieldEq2.setBounds(96, 189,45,20);
 		panelImageLlaves.add(textFieldEq2);
+		
+		textFieldEq3.setBounds(96, 309,45,20);
+		panelImageLlaves.add(textFieldEq3);
+		
+		textFieldEq4.setBounds(96, 425,45,20);
+		panelImageLlaves.add(textFieldEq4);
+		
+		/**********************************/
+		
+		textFieldEq5.setBounds(600, 69,45,20);
+		panelImageLlaves.add(textFieldEq5);
+		
+		textFieldEq6.setBounds(600, 189,45,20);
+		panelImageLlaves.add(textFieldEq6);
+		
+		textFieldEq7.setBounds(600, 309,45,20);
+		panelImageLlaves.add(textFieldEq7);
+		
+		textFieldEq8.setBounds(600, 425,45,20);
+		panelImageLlaves.add(textFieldEq8);
 	}
 
 	public void inicializarSemifinal(){
-
-
+		
+		textFieldSem1.setBounds(160, 129,60,20);
+		panelImageLlaves.add(textFieldSem1);
+		
+		textFieldSem2.setBounds(161, 367,60,20);
+		panelImageLlaves.add(textFieldSem2);
+		
+		textFieldSem3.setBounds(521, 129,57,20);
+		panelImageLlaves.add(textFieldSem3);
+		
+		textFieldSem4.setBounds(521, 367,57,20);
+		panelImageLlaves.add(textFieldSem4);
+		
 	}
 
 	public void inicializarFinal(){
-
-
+		
+		textFieldFinal1.setBounds(280, 248,60,20);//Izquierda
+		panelImageLlaves.add(textFieldFinal1);
+		
+		textFieldFinal2.setBounds(400, 248,60,20);//Derecha
+		panelImageLlaves.add(textFieldFinal2);
+		
+	}
+	
+	public void Posiciones() {
+		primero = new JLabel("Campeón");
+		segundo = new JLabel("Sub-Campeón");
+		tercero = new JLabel("Tercero");
+		cuarto = new JLabel("Cuarto");
+		
+		primero.setBounds(330, 280, 1100, 60);
+		primero.setFont(new Font("arial", 0, 20));
+		primero.setForeground(Color.white);
+		panelImageLlaves.add(primero);
+		
+		segundo.setBounds(320, 360, 1100, 60);
+		segundo.setFont(new Font("arial", 0, 20));
+		segundo.setForeground(Color.white);
+		panelImageLlaves.add(segundo);
+		
+		tercero.setBounds(200, 420, 1100, 60);
+		tercero.setFont(new Font("arial", 0, 20));
+		tercero.setForeground(Color.white);
+		panelImageLlaves.add(tercero);
+		
+		cuarto.setBounds(400, 420, 1100, 60);
+		cuarto.setFont(new Font("arial", 0, 20));
+		cuarto.setForeground(Color.white);
+		panelImageLlaves.add(cuarto);
+		
+		textFieldGanador.setBounds(340, 325,60,20);
+		panelImageLlaves.add(textFieldGanador);
+		textFieldSegundo.setBounds(340, 400,60,20);
+		panelImageLlaves.add(textFieldSegundo);
+		
+		textFieldTercero.setBounds(270, 445,60,20);
+		panelImageLlaves.add(textFieldTercero);
+		textFieldCuarto.setBounds(460, 445,60,20);
+		panelImageLlaves.add(textFieldCuarto);
+		
 	}
 
 }
