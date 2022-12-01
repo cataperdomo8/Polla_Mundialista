@@ -27,6 +27,7 @@ public class Ventana extends JFrame{
 	private JLabel partido4;
 	private JLabel partido5;
 	private JLabel partido6;
+	private JLabel titulo;
 
 	public JButton boton0 = new JButton("Grupo A");
 	public JButton boton1 = new JButton("Grupo B");
@@ -36,7 +37,7 @@ public class Ventana extends JFrame{
 	public JButton boton5 = new JButton("Grupo F");
 	public JButton boton6 = new JButton("Grupo G");
 	public JButton boton7 = new JButton("Grupo H");
-	public JButton bContinuar = new JButton("Continuar");
+	public JButton bSiguienteFase = new JButton("Siguiente Fase");
 
 	public JTextField textFieldGA1=new JTextField("0");
 	public JTextField textFieldGA2=new JTextField("2");
@@ -50,7 +51,7 @@ public class Ventana extends JFrame{
 	public JTextField textFieldGA10=new JTextField("1");
 	public JTextField textFieldGA11=new JTextField("2");
 	public JTextField textFieldGA12=new JTextField("1");
-	
+
 	public JTextField textFieldGB1=new JTextField("6");
 	public JTextField textFieldGB2=new JTextField("2");
 	public JTextField textFieldGB3=new JTextField("2");
@@ -63,7 +64,7 @@ public class Ventana extends JFrame{
 	public JTextField textFieldGB10=new JTextField("0");
 	public JTextField textFieldGB11=new JTextField("3");
 	public JTextField textFieldGB12=new JTextField("3");
-	
+
 	public JTextField textFieldGC1=new JTextField("0");
 	public JTextField textFieldGC2=new JTextField("0");
 	public JTextField textFieldGC3=new JTextField("3");
@@ -76,7 +77,7 @@ public class Ventana extends JFrame{
 	public JTextField textFieldGC10=new JTextField("0");
 	public JTextField textFieldGC11=new JTextField("3");
 	public JTextField textFieldGC12=new JTextField("3");
-	
+
 	public JTextField textFieldGD1=new JTextField("0");
 	public JTextField textFieldGD2=new JTextField("0");
 	public JTextField textFieldGD3=new JTextField("3");
@@ -89,7 +90,7 @@ public class Ventana extends JFrame{
 	public JTextField textFieldGD10=new JTextField("1");
 	public JTextField textFieldGD11=new JTextField("3");
 	public JTextField textFieldGD12=new JTextField("0");
-	
+
 	public JTextField textFieldGE1=new JTextField("0");
 	public JTextField textFieldGE2=new JTextField("5");
 	public JTextField textFieldGE3=new JTextField("2");
@@ -102,7 +103,7 @@ public class Ventana extends JFrame{
 	public JTextField textFieldGE10=new JTextField("2");
 	public JTextField textFieldGE11=new JTextField("1");
 	public JTextField textFieldGE12=new JTextField("2");
-	
+
 	public JTextField textFieldGF1=new JTextField("1");
 	public JTextField textFieldGF2=new JTextField("3");
 	public JTextField textFieldGF3=new JTextField("2");
@@ -115,7 +116,7 @@ public class Ventana extends JFrame{
 	public JTextField textFieldGF10=new JTextField("0");
 	public JTextField textFieldGF11=new JTextField("2");
 	public JTextField textFieldGF12=new JTextField("0");
-	
+
 	public JTextField textFieldGG1=new JTextField("0");
 	public JTextField textFieldGG2=new JTextField("0");
 	public JTextField textFieldGG3=new JTextField("1");
@@ -128,7 +129,7 @@ public class Ventana extends JFrame{
 	public JTextField textFieldGG10=new JTextField("7");
 	public JTextField textFieldGG11=new JTextField("0");
 	public JTextField textFieldGG12=new JTextField("2");
-	
+
 	public JTextField textFieldGH1=new JTextField("2");
 	public JTextField textFieldGH2=new JTextField("1");
 	public JTextField textFieldGH3=new JTextField("2");
@@ -141,9 +142,9 @@ public class Ventana extends JFrame{
 	public JTextField textFieldGH10=new JTextField("0");
 	public JTextField textFieldGH11=new JTextField("2");
 	public JTextField textFieldGH12=new JTextField("3");
-	
+
 	public Ventana() {
-		super("_ P O L L A_M U N D I A L I S T A_");
+		super("_ P O L L A _ M U N D I A L I S T A _ F A S E 1 _");
 		setLayout(null);
 		setBounds(10, 10, 1350, 680);
 		setVisible(true);
@@ -232,7 +233,7 @@ public class Ventana extends JFrame{
 	}
 
 	public void inicializarEtiquetas() {
-		etiquetas = new JLabel("P O L L A M U N D I A L I S T A");
+		etiquetas = new JLabel("P O L L A  M U N D I A L I S T A  F A S E 1");
 		etiquetas.setBounds(0, 0, 1000, 60);
 		etiquetas.setHorizontalAlignment((int) TOP_ALIGNMENT);
 		etiquetas.setFont(new Font("calibri", 1, 24));
@@ -276,12 +277,18 @@ public class Ventana extends JFrame{
 	}
 
 	public void inicializarGA(){
+		titulo = new JLabel("Grupo A");
 		partido1 = new JLabel("Qatar                                                    Ecuador");
 		partido2 = new JLabel("Senegal                                                Holanda");
 		partido3 = new JLabel("Holanda                                               Ecuador");
 		partido4 = new JLabel("Qatar                                                    Senegal");
 		partido5 = new JLabel("Ecuador                                                Senegal");
 		partido6 = new JLabel("Holanda                                                Qatar");
+
+		titulo.setBounds(450, 10, 1100, 60);
+		titulo.setFont(new Font("Arial", 0, 20));
+		titulo.setForeground(Color.white);
+		panelGA.add(titulo);
 		
 		partido1.setBounds(300, 30, 1100, 60);
 		partido1.setFont(new Font("calibri", 0, 20));
@@ -292,66 +299,72 @@ public class Ventana extends JFrame{
 		partido2.setFont(new Font("calibri", 0, 20));
 		partido2.setForeground(Color.white);
 		panelGA.add(partido2);
-		
+
 		partido3.setBounds(300, 110, 1100, 60);
 		partido3.setFont(new Font("calibri", 0, 20));
 		partido3.setForeground(Color.white);
 		panelGA.add(partido3);
-		
+
 		partido4.setBounds(300, 150, 1100, 60);
 		partido4.setFont(new Font("calibri", 0, 20));
 		partido4.setForeground(Color.white);
 		panelGA.add(partido4);
-		
+
 		partido5.setBounds(300, 190, 1100, 60);
 		partido5.setFont(new Font("calibri", 0, 20));
 		partido5.setForeground(Color.white);
 		panelGA.add(partido5);
-		
+
 		partido6.setBounds(300, 230, 1100, 60);
 		partido6.setFont(new Font("calibri", 0, 20));
 		partido6.setForeground(Color.white);
 		panelGA.add(partido6);
-		
+
 		textFieldGA1.setBounds(375, 45,40,20);
 		panelGA.add(textFieldGA1);
 		textFieldGA2.setBounds(550, 45,40,20);
 		panelGA.add(textFieldGA2);
-		
+
 		textFieldGA3.setBounds(375, 90,40,20);
 		panelGA.add(textFieldGA3);
-        textFieldGA4.setBounds(550, 90,40,20);
+		textFieldGA4.setBounds(550, 90,40,20);
 		panelGA.add(textFieldGA4);
-		
+
 		textFieldGA5.setBounds(375, 130,40,20);
 		panelGA.add(textFieldGA5);
-        textFieldGA6.setBounds(550, 130,40,20);
+		textFieldGA6.setBounds(550, 130,40,20);
 		panelGA.add(textFieldGA6);
-		
+
 		textFieldGA7.setBounds(375, 170,40,20);
 		panelGA.add(textFieldGA7);
-        textFieldGA8.setBounds(550, 170,40,20);
+		textFieldGA8.setBounds(550, 170,40,20);
 		panelGA.add(textFieldGA8);
-		
+
 		textFieldGA9.setBounds(375, 210,40,20);
 		panelGA.add(textFieldGA9);
-        textFieldGA10.setBounds(550, 210,40,20);
+		textFieldGA10.setBounds(550, 210,40,20);
 		panelGA.add(textFieldGA10);
-		
+
 		textFieldGA11.setBounds(375, 250,40,20);
 		panelGA.add(textFieldGA11);
-        textFieldGA12.setBounds(550, 250,40,20);
+		textFieldGA12.setBounds(550, 250,40,20);
 		panelGA.add(textFieldGA12);
-		
+
 	}
 
 	public void inicializarGB(){
+		titulo = new JLabel("Grupo B");
 		partido1 = new JLabel("Inglaterra                                           Iran");
 		partido2 = new JLabel("USA                                                    Gales");
 		partido3 = new JLabel("Gales                                                  Iran");
 		partido4 = new JLabel("Inglaterra                                           USA");
 		partido5 = new JLabel("Iran                                                     USA");
 		partido6 = new JLabel("Gales                                                  Inglaterra");
+
+		titulo.setBounds(450, 10, 1100, 60);
+		titulo.setFont(new Font("Arial", 0, 20));
+		titulo.setForeground(Color.white);
+		panelGB.add(titulo);
 		
 		partido1.setBounds(300, 30, 1100, 60);
 		partido1.setFont(new Font("calibri", 0, 20));
@@ -362,67 +375,72 @@ public class Ventana extends JFrame{
 		partido2.setFont(new Font("calibri", 0, 20));
 		partido2.setForeground(Color.white);
 		panelGB.add(partido2);
-		
+
 		partido3.setBounds(300, 110, 1100, 60);
 		partido3.setFont(new Font("calibri", 0, 20));
 		partido3.setForeground(Color.white);
 		panelGB.add(partido3);
-		
+
 		partido4.setBounds(300, 150, 1100, 60);
 		partido4.setFont(new Font("calibri", 0, 20));
 		partido4.setForeground(Color.white);
 		panelGB.add(partido4);
-		
+
 		partido5.setBounds(300, 190, 1100, 60);
 		partido5.setFont(new Font("calibri", 0, 20));
 		partido5.setForeground(Color.white);
 		panelGB.add(partido5);
-		
+
 		partido6.setBounds(300, 230, 1100, 60);
 		partido6.setFont(new Font("calibri", 0, 20));
 		partido6.setForeground(Color.white);
 		panelGB.add(partido6);
-		
+
 		textFieldGB1.setBounds(382, 45,40,20);
 		panelGB.add(textFieldGB1);
 		textFieldGB2.setBounds(550, 45,40,20);
 		panelGB.add(textFieldGB2);
-		
+
 		textFieldGB3.setBounds(382, 90,40,20);
 		panelGB.add(textFieldGB3);
-        textFieldGB4.setBounds(550, 90,40,20);
+		textFieldGB4.setBounds(550, 90,40,20);
 		panelGB.add(textFieldGB4);
-		
+
 		textFieldGB5.setBounds(382, 130,40,20);
 		panelGB.add(textFieldGB5);
-        textFieldGB6.setBounds(550, 130,40,20);
+		textFieldGB6.setBounds(550, 130,40,20);
 		panelGB.add(textFieldGB6);
-		
+
 		textFieldGB7.setBounds(382, 170,40,20);
 		panelGB.add(textFieldGB7);
-        textFieldGB8.setBounds(550, 170,40,20);
+		textFieldGB8.setBounds(550, 170,40,20);
 		panelGB.add(textFieldGB8);
-		
+
 		textFieldGB9.setBounds(382, 210,40,20);
 		panelGB.add(textFieldGB9);
-        textFieldGB10.setBounds(550, 210,40,20);
+		textFieldGB10.setBounds(550, 210,40,20);
 		panelGB.add(textFieldGB10);
-		
+
 		textFieldGB11.setBounds(382, 250,40,20);
 		panelGB.add(textFieldGB11);
-        textFieldGB12.setBounds(550, 250,40,20);
+		textFieldGB12.setBounds(550, 250,40,20);
 		panelGB.add(textFieldGB12);
-		
+
 	}
-	
+
 	public void inicializarGC(){
-		
+		titulo = new JLabel("Grupo C");
 		partido1 = new JLabel("Argentina                                           Arabia");
 		partido2 = new JLabel("Mexico                                               Polonia");
 		partido3 = new JLabel("Polonia                                               Arabia");
 		partido4 = new JLabel("Argentina                                           Mexico");
 		partido5 = new JLabel("Polonia                                               Argentina");
 		partido6 = new JLabel("Arabia                                                Mexico");
+
+		titulo.setBounds(450, 10, 1100, 60);
+		titulo.setFont(new Font("Arial", 0, 20));
+		titulo.setForeground(Color.white);
+		panelGC.add(titulo);
 		
 		partido1.setBounds(300, 30, 1100, 60);
 		partido1.setFont(new Font("calibri", 0, 20));
@@ -433,68 +451,73 @@ public class Ventana extends JFrame{
 		partido2.setFont(new Font("calibri", 0, 20));
 		partido2.setForeground(Color.white);
 		panelGC.add(partido2);
-		
+
 		partido3.setBounds(300, 110, 1100, 60);
 		partido3.setFont(new Font("calibri", 0, 20));
 		partido3.setForeground(Color.white);
 		panelGC.add(partido3);
-		
+
 		partido4.setBounds(300, 150, 1100, 60);
 		partido4.setFont(new Font("calibri", 0, 20));
 		partido4.setForeground(Color.white);
 		panelGC.add(partido4);
-		
+
 		partido5.setBounds(300, 190, 1100, 60);
 		partido5.setFont(new Font("calibri", 0, 20));
 		partido5.setForeground(Color.white);
 		panelGC.add(partido5);
-		
+
 		partido6.setBounds(300, 230, 1100, 60);
 		partido6.setFont(new Font("calibri", 0, 20));
 		partido6.setForeground(Color.white);
 		panelGC.add(partido6);
-		
+
 		textFieldGC1.setBounds(382, 45,40,20);
 		panelGC.add(textFieldGC1);
 		textFieldGC2.setBounds(550, 45,40,20);
 		panelGC.add(textFieldGC2);
-		
+
 		textFieldGC3.setBounds(382, 90,40,20);
 		panelGC.add(textFieldGC3);
-        textFieldGC4.setBounds(550, 90,40,20);
+		textFieldGC4.setBounds(550, 90,40,20);
 		panelGC.add(textFieldGC4);
-		
+
 		textFieldGC5.setBounds(382, 130,40,20);
 		panelGC.add(textFieldGC5);
-        textFieldGC6.setBounds(550, 130,40,20);
+		textFieldGC6.setBounds(550, 130,40,20);
 		panelGC.add(textFieldGC6);
-		
+
 		textFieldGC7.setBounds(382, 170,40,20);
 		panelGC.add(textFieldGC7);
 		textFieldGC8.setBounds(550, 170,40,20);
 		panelGC.add(textFieldGC8);
-		
+
 		textFieldGC9.setBounds(382, 210,40,20);
 		panelGC.add(textFieldGC9);
-        textFieldGC10.setBounds(550, 210,40,20);
+		textFieldGC10.setBounds(550, 210,40,20);
 		panelGC.add(textFieldGC10);
-		
+
 		textFieldGC11.setBounds(382, 250,40,20);
 		panelGC.add(textFieldGC11);
-        textFieldGC12.setBounds(550, 250,40,20);
+		textFieldGC12.setBounds(550, 250,40,20);
 		panelGC.add(textFieldGC12);
-		
-		
+
+
 	}
-	
+
 	public void inicializarGD(){
-		
+		titulo = new JLabel("Grupo D");
 		partido1 = new JLabel("Dinamarca                                         Tunez");
 		partido2 = new JLabel("Francia                                               Australia");
 		partido3 = new JLabel("Túnez                                                 Australia");
 		partido4 = new JLabel("Francia                                               Dinamarca");
 		partido5 = new JLabel("Australia                                            Dinamarca");
 		partido6 = new JLabel("Túnez                                                 Francia");
+		
+		titulo.setBounds(450, 10, 1100, 60);
+		titulo.setFont(new Font("Arial", 0, 20));
+		titulo.setForeground(Color.white);
+		panelGD.add(titulo);
 		
 		partido1.setBounds(300, 30, 1100, 60);
 		partido1.setFont(new Font("calibri", 0, 20));
@@ -505,67 +528,72 @@ public class Ventana extends JFrame{
 		partido2.setFont(new Font("calibri", 0, 20));
 		partido2.setForeground(Color.white);
 		panelGD.add(partido2);
-		
+
 		partido3.setBounds(300, 110, 1100, 60);
 		partido3.setFont(new Font("calibri", 0, 20));
 		partido3.setForeground(Color.white);
 		panelGD.add(partido3);
-		
+
 		partido4.setBounds(300, 150, 1100, 60);
 		partido4.setFont(new Font("calibri", 0, 20));
 		partido4.setForeground(Color.white);
 		panelGD.add(partido4);
-		
+
 		partido5.setBounds(300, 190, 1100, 60);
 		partido5.setFont(new Font("calibri", 0, 20));
 		partido5.setForeground(Color.white);
 		panelGD.add(partido5);
-		
+
 		partido6.setBounds(300, 230, 1100, 60);
 		partido6.setFont(new Font("calibri", 0, 20));
 		partido6.setForeground(Color.white);
 		panelGD.add(partido6);
-		
+
 		textFieldGD1.setBounds(388, 45,40,20);
 		panelGD.add(textFieldGD1);
 		textFieldGD2.setBounds(550, 45,40,20);
 		panelGD.add(textFieldGD2);
-		
+
 		textFieldGD3.setBounds(388, 90,40,20);
 		panelGD.add(textFieldGD3);
-        textFieldGD4.setBounds(550, 90,40,20);
+		textFieldGD4.setBounds(550, 90,40,20);
 		panelGD.add(textFieldGD4);
-		
+
 		textFieldGD5.setBounds(388, 130,40,20);
 		panelGD.add(textFieldGD5);
-        textFieldGD6.setBounds(550, 130,40,20);
+		textFieldGD6.setBounds(550, 130,40,20);
 		panelGD.add(textFieldGD6);
-		
+
 		textFieldGD7.setBounds(388, 170,40,20);
 		panelGD.add(textFieldGD7);
-        textFieldGD8.setBounds(550, 170,40,20);
+		textFieldGD8.setBounds(550, 170,40,20);
 		panelGD.add(textFieldGD8);
-		
+
 		textFieldGD9.setBounds(388, 210,40,20);
 		panelGD.add(textFieldGD9);
-        textFieldGD10.setBounds(550, 210,40,20);
+		textFieldGD10.setBounds(550, 210,40,20);
 		panelGD.add(textFieldGD10);
-		
+
 		textFieldGD11.setBounds(388, 250,40,20);
 		panelGD.add(textFieldGD11);
-        textFieldGD12.setBounds(550, 250,40,20);
+		textFieldGD12.setBounds(550, 250,40,20);
 		panelGD.add(textFieldGD12);
-		
+
 	}
-	
+
 	public void inicializarGE(){
-		
+		titulo = new JLabel("Grupo E");
 		partido1 = new JLabel("Alemania                                            Japon");
 		partido2 = new JLabel("España                                               Costa rica");
 		partido3 = new JLabel("Japon                                                 Costa rica");
 		partido4 = new JLabel("España                                               Alemania");
 		partido5 = new JLabel("Costa Rica                                          Alemania");
 		partido6 = new JLabel("Japon                                                 España");
+
+		titulo.setBounds(450, 10, 1100, 60);
+		titulo.setFont(new Font("Arial", 0, 20));
+		titulo.setForeground(Color.white);
+		panelGE.add(titulo);
 		
 		partido1.setBounds(300, 30, 1100, 60);
 		partido1.setFont(new Font("calibri", 0, 20));
@@ -576,69 +604,74 @@ public class Ventana extends JFrame{
 		partido2.setFont(new Font("calibri", 0, 20));
 		partido2.setForeground(Color.white);
 		panelGE.add(partido2);
-		
+
 		partido3.setBounds(300, 110, 1100, 60);
 		partido3.setFont(new Font("calibri", 0, 20));
 		partido3.setForeground(Color.white);
 		panelGE.add(partido3);
-		
+
 		partido4.setBounds(300, 150, 1100, 60);
 		partido4.setFont(new Font("calibri", 0, 20));
 		partido4.setForeground(Color.white);
 		panelGE.add(partido4);
-		
+
 		partido5.setBounds(300, 190, 1100, 60);
 		partido5.setFont(new Font("calibri", 0, 20));
 		partido5.setForeground(Color.white);
 		panelGE.add(partido5);
-		
+
 		partido6.setBounds(300, 230, 1100, 60);
 		partido6.setFont(new Font("calibri", 0, 20));
 		partido6.setForeground(Color.white);
 		panelGE.add(partido6);
-		
+
 		textFieldGE1.setBounds(387, 45,40,20);
 		panelGE.add(textFieldGE1);
 		textFieldGE2.setBounds(550, 45,40,20);
 		panelGE.add(textFieldGE2);
-		
+
 		textFieldGE3.setBounds(387, 90,40,20);
 		panelGE.add(textFieldGE3);
-        textFieldGE4.setBounds(550, 90,40,20);
+		textFieldGE4.setBounds(550, 90,40,20);
 		panelGE.add(textFieldGE4);
-		
+
 		textFieldGE5.setBounds(387, 130,40,20);
 		panelGE.add(textFieldGE5);
-        textFieldGE6.setBounds(550, 130,40,20);
+		textFieldGE6.setBounds(550, 130,40,20);
 		panelGE.add(textFieldGE6);
-		
+
 		textFieldGE7.setBounds(387, 170,40,20);
 		panelGE.add(textFieldGE7);
-        textFieldGE8.setBounds(550, 170,40,20);
+		textFieldGE8.setBounds(550, 170,40,20);
 		panelGE.add(textFieldGE8);
-		
+
 		textFieldGE9.setBounds(387, 210,40,20);
 		panelGE.add(textFieldGE9);
-        textFieldGE10.setBounds(550, 210,40,20);
+		textFieldGE10.setBounds(550, 210,40,20);
 		panelGE.add(textFieldGE10);
-		
+
 		textFieldGE11.setBounds(387, 250,40,20);
 		panelGE.add(textFieldGE11);
-        textFieldGE12.setBounds(550, 250,40,20);
+		textFieldGE12.setBounds(550, 250,40,20);
 		panelGE.add(textFieldGE12);
-		
-		
+
+
 	}
-	
-	
+
+
 	public void inicializarGF(){
-		
+		titulo = new JLabel("Grupo F");
 		partido1 = new JLabel("Marruecos                                         Croacia");
 		partido2 = new JLabel("Belgica                                               Canada");
 		partido3 = new JLabel("Belgica                                               Marruecos");
 		partido4 = new JLabel("Croacia                                              Canada");
 		partido5 = new JLabel("Canada                                              Marruecos");
 		partido6 = new JLabel("Croacia                                              Belgica");
+
+		titulo.setBounds(450, 10, 1100, 60);
+		titulo.setFont(new Font("Arial", 0, 20));
+		titulo.setForeground(Color.white);
+		panelGF.add(titulo);
 		
 		partido1.setBounds(300, 30, 1100, 60);
 		partido1.setFont(new Font("calibri", 0, 20));
@@ -649,67 +682,72 @@ public class Ventana extends JFrame{
 		partido2.setFont(new Font("calibri", 0, 20));
 		partido2.setForeground(Color.white);
 		panelGF.add(partido2);
-		
+
 		partido3.setBounds(300, 110, 1100, 60);
 		partido3.setFont(new Font("calibri", 0, 20));
 		partido3.setForeground(Color.white);
 		panelGF.add(partido3);
-		
+
 		partido4.setBounds(300, 150, 1100, 60);
 		partido4.setFont(new Font("calibri", 0, 20));
 		partido4.setForeground(Color.white);
 		panelGF.add(partido4);
-		
+
 		partido5.setBounds(300, 190, 1100, 60);
 		partido5.setFont(new Font("calibri", 0, 20));
 		partido5.setForeground(Color.white);
 		panelGF.add(partido5);
-		
+
 		partido6.setBounds(300, 230, 1100, 60);
 		partido6.setFont(new Font("calibri", 0, 20));
 		partido6.setForeground(Color.white);
 		panelGF.add(partido6);
-		
+
 		textFieldGF1.setBounds(388, 45,40,20);
 		panelGF.add(textFieldGF1);
 		textFieldGF2.setBounds(550, 45,40,20);
 		panelGF.add(textFieldGF2);
-		
+
 		textFieldGF3.setBounds(388, 90,40,20);
 		panelGF.add(textFieldGF3);
-        textFieldGF4.setBounds(550, 90,40,20);
+		textFieldGF4.setBounds(550, 90,40,20);
 		panelGF.add(textFieldGF4);
-		
+
 		textFieldGF5.setBounds(388, 130,40,20);
 		panelGF.add(textFieldGF5);
-        textFieldGF6.setBounds(550, 130,40,20);
+		textFieldGF6.setBounds(550, 130,40,20);
 		panelGF.add(textFieldGF6);
-		
+
 		textFieldGF7.setBounds(388, 170,40,20);
 		panelGF.add(textFieldGF7);
-        textFieldGF8.setBounds(550, 170,40,20);
+		textFieldGF8.setBounds(550, 170,40,20);
 		panelGF.add(textFieldGF8);
-		
+
 		textFieldGF9.setBounds(388, 210,40,20);
 		panelGF.add(textFieldGF9);
-        textFieldGF10.setBounds(550, 210,40,20);
+		textFieldGF10.setBounds(550, 210,40,20);
 		panelGF.add(textFieldGF10);
-		
+
 		textFieldGF11.setBounds(388, 250,40,20);
 		panelGF.add(textFieldGF11);
-        textFieldGF12.setBounds(550, 250,40,20);
+		textFieldGF12.setBounds(550, 250,40,20);
 		panelGF.add(textFieldGF12);
-		
+
 	}
-	
+
 	public void inicializarGG(){
-		
+		titulo = new JLabel("Grupo G");
 		partido1 = new JLabel("Suiza                                                  Camerún");
 		partido2 = new JLabel("Brasil                                                  Serbia");
 		partido3 = new JLabel("Camerun                                            Serbia");
 		partido4 = new JLabel("Brasil                                                  Suiza");
 		partido5 = new JLabel("Serbia                                                 Suiza");
 		partido6 = new JLabel("Camerun                                            Brasil");
+
+		titulo.setBounds(450, 10, 1100, 60);
+		titulo.setFont(new Font("Arial", 0, 20));
+		titulo.setForeground(Color.white);
+		panelGG.add(titulo);
 		
 		partido1.setBounds(300, 30, 1100, 60);
 		partido1.setFont(new Font("calibri", 0, 20));
@@ -720,68 +758,72 @@ public class Ventana extends JFrame{
 		partido2.setFont(new Font("calibri", 0, 20));
 		partido2.setForeground(Color.white);
 		panelGG.add(partido2);
-		
+
 		partido3.setBounds(300, 110, 1100, 60);
 		partido3.setFont(new Font("calibri", 0, 20));
 		partido3.setForeground(Color.white);
 		panelGG.add(partido3);
-		
+
 		partido4.setBounds(300, 150, 1100, 60);
 		partido4.setFont(new Font("calibri", 0, 20));
 		partido4.setForeground(Color.white);
 		panelGG.add(partido4);
-		
+
 		partido5.setBounds(300, 190, 1100, 60);
 		partido5.setFont(new Font("calibri", 0, 20));
 		partido5.setForeground(Color.white);
 		panelGG.add(partido5);
-		
+
 		partido6.setBounds(300, 230, 1100, 60);
 		partido6.setFont(new Font("calibri", 0, 20));
 		partido6.setForeground(Color.white);
 		panelGG.add(partido6);
-		
+
 		textFieldGG1.setBounds(382, 45,40,20);
 		panelGG.add(textFieldGG1);
 		textFieldGG2.setBounds(550, 45,40,20);
 		panelGG.add(textFieldGG2);
-		
+
 		textFieldGG3.setBounds(382, 90,40,20);
 		panelGG.add(textFieldGG3);
-        textFieldGG4.setBounds(550, 90,40,20);
+		textFieldGG4.setBounds(550, 90,40,20);
 		panelGG.add(textFieldGG4);
-		
+
 		textFieldGG5.setBounds(382, 130,40,20);
 		panelGG.add(textFieldGG5);
-        textFieldGG6.setBounds(550, 130,40,20);
+		textFieldGG6.setBounds(550, 130,40,20);
 		panelGG.add(textFieldGG6);
-		
+
 		textFieldGG7.setBounds(382, 170,40,20);
 		panelGG.add(textFieldGG7);
-        textFieldGG8.setBounds(550, 170,40,20);
+		textFieldGG8.setBounds(550, 170,40,20);
 		panelGG.add(textFieldGG8);
-		
+
 		textFieldGG9.setBounds(382, 210,40,20);
 		panelGG.add(textFieldGG9);
-        textFieldGG10.setBounds(550, 210,40,20);
+		textFieldGG10.setBounds(550, 210,40,20);
 		panelGG.add(textFieldGG10);
-		
+
 		textFieldGG11.setBounds(382, 250,40,20);
 		panelGG.add(textFieldGG11);
-        textFieldGG12.setBounds(550, 250,40,20);
+		textFieldGG12.setBounds(550, 250,40,20);
 		panelGG.add(textFieldGG12);
-		
-	}
-	
-	public void inicializarGH(){
-		
 
+	}
+
+	public void inicializarGH(){
+		titulo = new JLabel("Grupo H");
 		partido1 = new JLabel("Uruguay                                             Corea");
 		partido2 = new JLabel("Portugal                                             Ghana");
 		partido3 = new JLabel("Corea                                                 Ghana");
 		partido4 = new JLabel("Portugal                                             Uruguay");
 		partido5 = new JLabel("Ghana                                                Uruguay");
 		partido6 = new JLabel("Corea                                                 Portugal");
+
+		titulo.setBounds(450, 10, 1100, 60);
+		titulo.setFont(new Font("Arial", 0, 20));
+		titulo.setForeground(Color.white);
+		panelGH.add(titulo);
 		
 		partido1.setBounds(300, 30, 1100, 60);
 		partido1.setFont(new Font("calibri", 0, 20));
@@ -792,61 +834,61 @@ public class Ventana extends JFrame{
 		partido2.setFont(new Font("calibri", 0, 20));
 		partido2.setForeground(Color.white);
 		panelGH.add(partido2);
-		
+
 		partido3.setBounds(300, 110, 1100, 60);
 		partido3.setFont(new Font("calibri", 0, 20));
 		partido3.setForeground(Color.white);
 		panelGH.add(partido3);
-		
+
 		partido4.setBounds(300, 150, 1100, 60);
 		partido4.setFont(new Font("calibri", 0, 20));
 		partido4.setForeground(Color.white);
 		panelGH.add(partido4);
-		
+
 		partido5.setBounds(300, 190, 1100, 60);
 		partido5.setFont(new Font("calibri", 0, 20));
 		partido5.setForeground(Color.white);
 		panelGH.add(partido5);
-		
+
 		partido6.setBounds(300, 230, 1100, 60);
 		partido6.setFont(new Font("calibri", 0, 20));
 		partido6.setForeground(Color.white);
 		panelGH.add(partido6);
-		
+
 		textFieldGH1.setBounds(382, 45,40,20);
 		panelGH.add(textFieldGH1);
 		textFieldGH2.setBounds(550, 45,40,20);
 		panelGH.add(textFieldGH2);
-		
+
 		textFieldGH3.setBounds(382, 90,40,20);
 		panelGH.add(textFieldGH3);
-        textFieldGH4.setBounds(550, 90,40,20);
+		textFieldGH4.setBounds(550, 90,40,20);
 		panelGH.add(textFieldGH4);
-		
+
 		textFieldGH5.setBounds(382, 130,40,20);
 		panelGH.add(textFieldGH5);
-        textFieldGH6.setBounds(550, 130,40,20);
+		textFieldGH6.setBounds(550, 130,40,20);
 		panelGH.add(textFieldGH6);
-		
+
 		textFieldGH7.setBounds(382, 170,40,20);
 		panelGH.add(textFieldGH7);
-        textFieldGH8.setBounds(550, 170,40,20);
+		textFieldGH8.setBounds(550, 170,40,20);
 		panelGH.add(textFieldGH8);
-		
+
 		textFieldGH9.setBounds(382, 210,40,20);
 		panelGH.add(textFieldGH9);
-        textFieldGH10.setBounds(550, 210,40,20);
+		textFieldGH10.setBounds(550, 210,40,20);
 		panelGH.add(textFieldGH10);
-		
+
 		textFieldGH11.setBounds(382, 250,40,20);
 		panelGH.add(textFieldGH11);
-        textFieldGH12.setBounds(550, 250,40,20);
+		textFieldGH12.setBounds(550, 250,40,20);
 		panelGH.add(textFieldGH12);
-		
-		bContinuar.setBounds(800,400, 100, 30);
-		bContinuar.setBackground(new Color(253, 251, 251));
-		panelGH.add(bContinuar);
-		
+
+		bSiguienteFase.setBounds(800,450, 120, 30);
+		bSiguienteFase.setBackground(new Color(253, 251, 251));
+		panelGH.add(bSiguienteFase);
+
 	}
 
 	//Recibe el controlador y se lo entrega al boton.
@@ -860,7 +902,7 @@ public class Ventana extends JFrame{
 		this.boton5.addActionListener(this.c);
 		this.boton6.addActionListener(this.c);
 		this.boton7.addActionListener(this.c);
-		this.bContinuar.addActionListener(this.c);
+		this.bSiguienteFase.addActionListener(this.c);
 	}
 
 	public JButton getBoton0() {
@@ -927,12 +969,12 @@ public class Ventana extends JFrame{
 		this.boton7 = boton7;
 	}
 
-	public JButton getbContinuar() {
-		return bContinuar;
+	public JButton getbSiguienteFase() {
+		return bSiguienteFase;
 	}
 
-	public void setbContinuar(JButton bContinuar) {
-		this.bContinuar = bContinuar;
+	public void setbSiguienteFase(JButton bSiguienteFase) {
+		this.bSiguienteFase = bSiguienteFase;
 	}
 
 	public Panel getPanelGA() {

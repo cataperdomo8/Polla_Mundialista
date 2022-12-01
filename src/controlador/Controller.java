@@ -6,20 +6,27 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 
 import modelo.FasesGrupos;
+import modelo.Finales;
 import vista.Panel;
 import vista.Ventana;
+import vista.Ventana2;
 
 public class Controller implements ActionListener{
 	
 	private Ventana vista;
 	private FasesGrupos grupos;
+	private Finales finales;
+	private Ventana2 vista2;
 	
-	public Controller (FasesGrupos g, Ventana v){
-        this.vista = v;
-        this.grupos = g;
-        this.vista.setController(this);
-       
-    }
+	public Controller (FasesGrupos g, Finales f, Ventana v, Ventana2 v2){
+		this.vista = v;
+		this.vista2 = v2;
+		this.grupos = g;
+		this.finales = f;
+		this.vista.setController(this);
+		this.vista2.setController(this);
+	}
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource()==vista.getBoton0()) {
@@ -94,10 +101,17 @@ public class Controller implements ActionListener{
 			vista.getPanelGF().setVisible(false);
 			vista.getPanelGG().setVisible(false);
 			vista.getPanelGH().setVisible(true);
-		}else if(e.getSource()==vista.getbContinuar()) {
+		}else if(e.getSource()==vista.getbSiguienteFase()) {
+			vista2.setVisible(true);
+			vista.setVisible(false);
+		}
+		if(e.getSource()==vista2.getbContinuar()) {
 			grupos.lectura("Resultados.txt");
-			JOptionPane.showMessageDialog(null, "Total Puntos "+grupos.getTotal());
-			System.out.println(grupos.getTotal());
+			finales.lectura("ResultadosFase2.txt");
+			JOptionPane.showMessageDialog(null, "Total Puntos "+(grupos.getTotal()+finales.getTotal()));
+			System.out.println("total"+(grupos.getTotal()+finales.getTotal()));
+			grupos.setTotal(0);
+			finales.setTotal(0);
 		}
 	}
 

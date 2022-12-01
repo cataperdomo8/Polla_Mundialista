@@ -745,6 +745,7 @@ public class FasesGrupos{
 			break;
 		}
 		}
+		System.out.println(this.total);
 
 	}
 
