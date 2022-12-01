@@ -1,0 +1,31 @@
+Octavos
+[ned-usa,arg-aust,spai-cro,bra-gha,ingla-sen,fra-pol,mar-jap,por-suiz]
+4-7,9-14,17-24,25-30,5-3,13-12,23-20,29-27
+3-5,9-14,17-21,25-30,7-4,13-12,24-20,29-27
+Llaves:4 Puntos:20
+
+Cuartos
+[ned-arg,spai-bra,ingla-fran,jap-por]
+4-9,17-25,5-13,20-29
+5-9,17-25,4-13,24-29
+Ganador Octavos: 5 Puntos: 15
+
+Semifinal
+[arg-bra,fran-port]
+9-25,13-29
+5-25,4-29
+Ganaron Cuartos:2 Puntos: 10
+
+Final
+[arg-port]
+9-29
+25-4
+Ganador Semifinal:0 
+
+Podio
+[por,arg,bra,fran]
+29,9,25,13
+25,4,5,29
+Podio: 0
+
+TOTAL PUNTOS:45+138=183
