@@ -26,6 +26,7 @@ public class Ventana2 extends JFrame{
 	private JLabel segundo;
 	private JLabel tercero;
 	private JLabel cuarto;
+	private JLabel titulo;
 
 	/*TextField Octvos de Final*/
 

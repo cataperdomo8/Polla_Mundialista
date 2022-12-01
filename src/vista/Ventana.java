@@ -27,6 +27,7 @@ public class Ventana extends JFrame{
 	private JLabel partido4;
 	private JLabel partido5;
 	private JLabel partido6;
+	private JLabel titulo;
 
 	public JButton boton0 = new JButton("Grupo A");
 	public JButton boton1 = new JButton("Grupo B");
@@ -277,12 +278,18 @@ public class Ventana extends JFrame{
 	}
 
 	public void inicializarGA(){
+		titulo = new JLabel("Grupo A");
 		partido1 = new JLabel("Qatar                                                    Ecuador");
 		partido2 = new JLabel("Senegal                                                Holanda");
 		partido3 = new JLabel("Holanda                                               Ecuador");
 		partido4 = new JLabel("Qatar                                                    Senegal");
 		partido5 = new JLabel("Ecuador                                                Senegal");
 		partido6 = new JLabel("Holanda                                                Qatar");
+		
+		titulo.setBounds(450, 10, 1100, 60);
+		titulo.setFont(new Font("Arial", 0, 20));
+		titulo.setForeground(Color.white);
+		panelGA.add(titulo);
 		
 		partido1.setBounds(300, 30, 1100, 60);
 		partido1.setFont(new Font("calibri", 0, 20));
@@ -347,12 +354,18 @@ public class Ventana extends JFrame{
 	}
 
 	public void inicializarGB(){
+		titulo = new JLabel("Grupo B");
 		partido1 = new JLabel("Inglaterra                                           Iran");
 		partido2 = new JLabel("USA                                                    Gales");
 		partido3 = new JLabel("Gales                                                  Iran");
 		partido4 = new JLabel("Inglaterra                                           USA");
 		partido5 = new JLabel("Iran                                                     USA");
 		partido6 = new JLabel("Gales                                                  Inglaterra");
+		
+		titulo.setBounds(450, 10, 1100, 60);
+		titulo.setFont(new Font("Arial", 0, 20));
+		titulo.setForeground(Color.white);
+		panelGB.add(titulo);
 		
 		partido1.setBounds(300, 30, 1100, 60);
 		partido1.setFont(new Font("calibri", 0, 20));
@@ -417,13 +430,18 @@ public class Ventana extends JFrame{
 	}
 	
 	public void inicializarGC(){
-		
+		titulo = new JLabel("Grupo C");
 		partido1 = new JLabel("Argentina                                           Arabia");
 		partido2 = new JLabel("Mexico                                               Polonia");
 		partido3 = new JLabel("Polonia                                               Arabia");
 		partido4 = new JLabel("Argentina                                           Mexico");
 		partido5 = new JLabel("Polonia                                               Argentina");
 		partido6 = new JLabel("Arabia                                                Mexico");
+		
+		titulo.setBounds(450, 10, 1100, 60);
+		titulo.setFont(new Font("Arial", 0, 20));
+		titulo.setForeground(Color.white);
+		panelGC.add(titulo);
 		
 		partido1.setBounds(300, 30, 1100, 60);
 		partido1.setFont(new Font("calibri", 0, 20));
@@ -489,13 +507,18 @@ public class Ventana extends JFrame{
 	}
 	
 	public void inicializarGD(){
-		
+		titulo = new JLabel("Grupo D");
 		partido1 = new JLabel("Dinamarca                                         Tunez");
 		partido2 = new JLabel("Francia                                               Australia");
 		partido3 = new JLabel("Túnez                                                 Australia");
 		partido4 = new JLabel("Francia                                               Dinamarca");
 		partido5 = new JLabel("Australia                                            Dinamarca");
 		partido6 = new JLabel("Túnez                                                 Francia");
+		
+		titulo.setBounds(450, 10, 1100, 60);
+		titulo.setFont(new Font("Arial", 0, 20));
+		titulo.setForeground(Color.white);
+		panelGD.add(titulo);
 		
 		partido1.setBounds(300, 30, 1100, 60);
 		partido1.setFont(new Font("calibri", 0, 20));
@@ -560,13 +583,18 @@ public class Ventana extends JFrame{
 	}
 	
 	public void inicializarGE(){
-		
+		titulo = new JLabel("Grupo E");
 		partido1 = new JLabel("Alemania                                            Japon");
 		partido2 = new JLabel("España                                               Costa rica");
 		partido3 = new JLabel("Japon                                                 Costa rica");
 		partido4 = new JLabel("España                                               Alemania");
 		partido5 = new JLabel("Costa Rica                                          Alemania");
 		partido6 = new JLabel("Japon                                                 España");
+		
+		titulo.setBounds(450, 10, 1100, 60);
+		titulo.setFont(new Font("Arial", 0, 20));
+		titulo.setForeground(Color.white);
+		panelGE.add(titulo);
 		
 		partido1.setBounds(300, 30, 1100, 60);
 		partido1.setFont(new Font("calibri", 0, 20));
@@ -633,13 +661,18 @@ public class Ventana extends JFrame{
 	
 	
 	public void inicializarGF(){
-		
+		titulo = new JLabel("Grupo F");
 		partido1 = new JLabel("Marruecos                                         Croacia");
 		partido2 = new JLabel("Belgica                                               Canada");
 		partido3 = new JLabel("Belgica                                               Marruecos");
 		partido4 = new JLabel("Croacia                                              Canada");
 		partido5 = new JLabel("Canada                                              Marruecos");
 		partido6 = new JLabel("Croacia                                              Belgica");
+		
+		titulo.setBounds(450, 10, 1100, 60);
+		titulo.setFont(new Font("Arial", 0, 20));
+		titulo.setForeground(Color.white);
+		panelGF.add(titulo);
 		
 		partido1.setBounds(300, 30, 1100, 60);
 		partido1.setFont(new Font("calibri", 0, 20));
@@ -704,13 +737,18 @@ public class Ventana extends JFrame{
 	}
 	
 	public void inicializarGG(){
-		
+		titulo = new JLabel("Grupo G");
 		partido1 = new JLabel("Suiza                                                  Camerún");
 		partido2 = new JLabel("Brasil                                                  Serbia");
 		partido3 = new JLabel("Camerun                                            Serbia");
 		partido4 = new JLabel("Brasil                                                  Suiza");
 		partido5 = new JLabel("Serbia                                                 Suiza");
 		partido6 = new JLabel("Camerun                                            Brasil");
+		
+		titulo.setBounds(450, 10, 1100, 60);
+		titulo.setFont(new Font("Arial", 0, 20));
+		titulo.setForeground(Color.white);
+		panelGG.add(titulo);
 		
 		partido1.setBounds(300, 30, 1100, 60);
 		partido1.setFont(new Font("calibri", 0, 20));
@@ -776,13 +814,18 @@ public class Ventana extends JFrame{
 	
 	public void inicializarGH(){
 		
-
+		titulo = new JLabel("Grupo H");
 		partido1 = new JLabel("Uruguay                                             Corea");
 		partido2 = new JLabel("Portugal                                             Ghana");
 		partido3 = new JLabel("Corea                                                 Ghana");
 		partido4 = new JLabel("Portugal                                             Uruguay");
 		partido5 = new JLabel("Ghana                                                Uruguay");
 		partido6 = new JLabel("Corea                                                 Portugal");
+		
+		titulo.setBounds(450, 10, 1100, 60);
+		titulo.setFont(new Font("Arial", 0, 20));
+		titulo.setForeground(Color.white);
+		panelGH.add(titulo);
 		
 		partido1.setBounds(300, 30, 1100, 60);
 		partido1.setFont(new Font("calibri", 0, 20));
