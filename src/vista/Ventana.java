@@ -19,6 +19,7 @@ public class Ventana extends JFrame{
 	private Panel panelGF;
 	private Panel panelGG;
 	private Panel panelGH;
+	private Panel2 panel2;
 
 	private JLabel etiquetas;
 	private JLabel partido1;
@@ -28,6 +29,8 @@ public class Ventana extends JFrame{
 	private JLabel partido5;
 	private JLabel partido6;
 	private JLabel titulo;
+	
+	private JLabel octavos;
 
 	public JButton boton0 = new JButton("Grupo A");
 	public JButton boton1 = new JButton("Grupo B");
